@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Introduction to Ottawa Burger Restaurant</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+   
+    <style>
+
+        body {
+            padding-top: 50px;
+            padding-bottom: 40px;
+            color: #5a5a5a;
+        }
+
+        /* ad */
+
+        .carousel {
+            height: 500px;
+            margin-bottom: 60px;
+        }
+
+        .carousel .item {
+            height: 500px;
+            background-color: #000;
+        }
+
+        .carousel .item img {
+            width: 100%;
+        }
+
+        .carousel-caption {
+            z-index: 10;
+        }
+
+        .carousel-caption p {
+            margin-bottom: 20px;
+            font-size: 20px;
+            line-height: 1.8;
+        }
+
+        /* feature */
+
+        .feature-divider {
+            margin: 40px 0;
+        }
+
+        .feature {
+            padding: 30px 0;
+        }
+
+        .feature-heading {
+            font-size: 50px;
+            color: #2a6496;
+        }
+
+        .feature-heading .text-muted {
+            font-size: 28px;
+        }
+
+       
+
+        @media (max-width: 768px) {
+
+            .summary {
+                padding-right: 3px;
+                padding-left: 3px;
+            }
+
+            .carousel {
+                height: 300px;
+                margin-bottom: 30px;
+            }
+
+            .carousel .item {
+                height: 300px;
+            }
+
+            .carousel img {
+                min-height: 300px;
+            }
+
+            .carousel-caption p {
+                font-size: 16px;
+                line-height: 1.4;
+            }
+
+            .feature-heading {
+                font-size: 34px;
+            }
+
+            .feature-heading .text-muted {
+                font-size: 22px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .feature-heading {
+                margin-top: 120px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+<!-- Nav -->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="menu-nav">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Nav switch</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Introduction to Ottawa Burger Restaurant</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#ad-carousel">Summary</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Feature<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#feature-tab" data-tab="tab-chrome">Five Guys</a></li>
+                        <li><a href="#feature-tab" data-tab="tab-firefox">Wendy's</a></li>
+                        <li><a href="#feature-tab" data-tab="tab-safari">Tim Hortons</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" data-toggle="modal" data-target="#about-modal">About</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<!-- ad -->
+<div id="ad-carousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#ad-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#ad-carousel" data-slide-to="1"></li>
+        <li data-target="#ad-carousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="images/fg_bg.jpg" alt="1 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Five Guys</h1>
+
+                    <p>Five Guys is an American fast casual restaurant chain focused on hamburgers, hot dogs, and French fries, and headquartered in Lorton, Virginia.</p>
+
+                    <p><a class="btn btn-lg btn-primary" href="https://www.fiveguys.ca/"
+                          role="button" target="_blank">Menu</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/wendy_bg.jpg" alt="2 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Wendy's</h1>
+
+                    <p>Wendy's is an American international fast food restaurant chain founded by Dave Thomas on November 15, 1969, in Columbus, Ohio. </p>
+
+                    <p><a class="btn btn-lg btn-primary" href="https://www.wendys.com/en-ca" target="_blank"
+                          role="button">Menu</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/th_bg.jpg" alt="3 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Tim Hortons</h1>
+
+                    <p>Tim Hortons Inc. is a Toronto-based fast food restaurant chain, specializing in coffee, doughnuts, and other fast food items.</p>
+
+                    <p><a class="btn btn-lg btn-primary" href="https://www.timhortons.com/" target="_blank"
+                          role="button">Menu</a></p>
+                </div>
+            </div>
+        </div>       
+    </div>
+    <a class="left carousel-control" href="#ad-carousel" data-slide="prev"><span
+            class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" href="#ad-carousel" data-slide="next"><span
+            class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+
+
+<!-- main -->
+<div class="container summary">
+
+    <!-- feature -->
+
+    <hr class="feature-divider">
+
+    <ul class="nav nav-tabs" role="tablist" id="feature-tab">
+        <li class="active"><a href="#tab-chrome" role="tab" data-toggle="tab">Five Guys</a></li>
+        <li><a href="#tab-firefox" role="tab" data-toggle="tab">Wendy's</a></li>
+        <li><a href="#tab-safari" role="tab" data-toggle="tab">Tim Hortons</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane active" id="tab-fg">
+            <div class="row feature">
+                <div class="col-md-7">
+
+                    <h2 class="feature-heading">Five Guys 
+                        <br>
+                        <span
+                            class="text-muted">The fastest-growing fast food chain in the United States</span></h2>
+
+                    <p class="lead">Five Guys Enterprises LLC (doing business as Five Guys Burgers and Fries) is an American fast casual restaurant chain focused on hamburgers, hot dogs, and French fries, and headquartered in Lorton, Virginia, an unincorporated part of Fairfax County. The first Five Guys restaurant opened in 1986 in Arlington County, Virginia, and by 2001, the chain had expanded to five locations throughout the Washington, D.C. metro area.
+                    </p>
+                </div>
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" src="images/fg.jpg"
+                         alt="fg">
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="tab-w">
+            <div class="row feature">
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" src="images/wendy.png"
+                         alt="w">
+                </div>
+                <div class="col-md-7">
+
+                    <h2 class="feature-heading">Wendy's 
+                        <br>
+                        <span class="text-muted">Wendy's was the world's third-largest hamburger fast-food chain in 2018</span>
+                        
+                    </h2>
+
+                    <p class="lead">Wendy's is an American international fast food restaurant chain founded by Dave Thomas on November 15, 1969, in Columbus, Ohio. The company moved its headquarters to Dublin, Ohio, on January 29, 2006. As of December 31, 2018, Wendy's was the world's third-largest hamburger fast-food chain with 6,711 locations, following Burger King and McDonald's. </p>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="tab-th">
+            <div class="row feature">
+                <div class="col-md-7">
+
+                    <h2 class="feature-heading">Tim Hortons 
+                        <br>
+                        <span class="text-muted">Canada's largest quick service restaurant chain</span></h2>
+
+                    <p class="lead">Tim Hortons Inc. is a Toronto-based fast food restaurant chain, specializing in coffee, doughnuts, and other fast food items.[5][6] It is Canada's largest quick service restaurant chain; as of December 31, 2018, it had a total of 4,846 restaurants in 14 countries.</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" src="images/th_logo.jpg"
+                         alt="th">
+                </div>
+            </div>
+        </div>
+    <!-- About -->
+    <div class="modal fade" id="about-modal" tabindex="-1" role="dialog" aria-labelledby="modal-label"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="modal-label">About</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Webpage exercises completed under the guidance of MOOC.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <p class="pull-right"><a href="#top">Back to the top</a></p>
+
+        <p>&copy; 2020 mock-shizheng </p>
+    </footer>
+
+</div>
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        $('#ad-carousel').carousel();
+        $('#menu-nav .navbar-collapse a').click(function (e) {
+            var href = $(this).attr('href');
+            var tabId = $(this).attr('data-tab');
+            if ('#' !== href) {
+                e.preventDefault();
+                $(document).scrollTop($(href).offset().top - 70);
+                if (tabId) {
+                    $('#feature-tab a[href=#' + tabId + ']').tab('show');
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>
